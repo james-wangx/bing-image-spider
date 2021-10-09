@@ -11,7 +11,7 @@ from settings import BASEDIR
 def makedir(directory, clean=False):
     """
     make a specific directory under the project,
-    delete existing directory and all its contents if clean is False.
+    delete existing directory and all its contents if clean is True.
     """
     if os.path.exists(directory):
         if clean:
