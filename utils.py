@@ -16,5 +16,6 @@ def makedir(directory, clean=False):
     if os.path.exists(directory):
         if clean:
             shutil.rmtree(os.path.join(BASEDIR, directory))
-    else:
-        os.mkdir(os.path.join(BASEDIR, directory))
+        else:
+            return
+    os.mkdir(os.path.join(BASEDIR, directory))
