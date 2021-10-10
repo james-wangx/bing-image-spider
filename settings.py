@@ -6,7 +6,7 @@ import os
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
-MAX_PAGE = 70
+MAX_PAGE = 73
 IMAGE_SIZE = 'UHD'
 IMAGE_URL = 'https://www.bing.com/th?id=OHR.'
 IMAGE_DIR = 'images'
@@ -17,3 +17,10 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/92.0.4515.131 Safari/537.36',
 }
+
+MYSQL_HOST = '127.0.0.1'
+MYSQL_PORT = 3306
+MYSQL_USER = 'root'
+MYSQL_TABLE = 'test'
+MYSQL_DATABASE = 'spiders'
+MYSQL_PASSWORD = 'mysql'

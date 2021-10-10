@@ -23,6 +23,6 @@ else:
 if __name__ == '__main__':
     start = time.time()
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(start_spider())
+    loop.run_until_complete(start_spider(loop))
     end = time.time()
     logger.info(f'Task finished, take {(end - start):.3f} seconds.')
