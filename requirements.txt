@@ -2,3 +2,4 @@ parsel==1.6.0
 aiohttp==3.7.4.post0
 loguru==0.5.3
 aiofiles==0.7.0
+aiomysql==0.0.21
