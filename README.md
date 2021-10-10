@@ -30,5 +30,5 @@ A concurrent spider that can download bing UHD images. Based on aiohttp, aiofile
 
 
 
-![image-20211010161104054](C:\Users\pinea\Pictures\Camera Roll\image-20211010161104054.png)
+![image-20211010161104054](https://gitee.com/pineapple-cpp/typora-image/raw/master/2021-10/image.png)
 
