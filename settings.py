@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # settings.py - 2021/10/7
 # project settings
+import argparse
 import os
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
@@ -12,7 +13,6 @@ IMAGE_URL = 'https://www.bing.com/th?id=OHR.'
 IMAGE_DIR = 'images'
 
 OFFICIAL_API = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-cn'
-DAILY_UPDATE = True
 
 URL = 'https://bing.ioliu.cn'
 HEADERS = {
@@ -26,6 +26,12 @@ MYSQL_USER = 'root'
 MYSQL_TABLE = 'test'
 MYSQL_DATABASE = 'spiders'
 MYSQL_PASSWORD = 'mysql'
+
+parser = argparse.ArgumentParser(description="Bing Image Spider")
+parser.add_argument('--daily', type=bool, default=True,
+                    help='Daily update or not.')
+args = parser.parse_args()
+DAILY_UPDATE = args.daily
 
 if DAILY_UPDATE:
     DIR_CLEAN = False
