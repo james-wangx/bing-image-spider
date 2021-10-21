@@ -1,4 +1,4 @@
-# BingImageSpider
+# Bing Image Spider
 
 
 
