@@ -7,7 +7,7 @@ import os
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
-MAX_PAGE = 73
+MAX_PAGE = 75
 IMAGE_SIZE = 'UHD'
 IMAGE_URL = 'https://www.bing.com/th?id=OHR.'
 IMAGE_DIR = 'images'
@@ -23,12 +23,12 @@ HEADERS = {
 MYSQL_HOST = '127.0.0.1'
 MYSQL_PORT = 3306
 MYSQL_USER = 'root'
-MYSQL_TABLE = 'test'
-MYSQL_DATABASE = 'spiders'
-MYSQL_PASSWORD = 'mysql'
+MYSQL_TABLE = os.getenv('MYSQL_TABLE', 'bing_images')
+MYSQL_DATABASE = os.getenv('MYSQL_DATABASE', 'spiders')
+MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD', 'mysql666')
 
 parser = argparse.ArgumentParser(description="Bing Image Spider")
-parser.add_argument('--daily', type=bool, default=True,
+parser.add_argument('--daily', type=int, default=1,
                     help='Daily update or not.')
 args = parser.parse_args()
 DAILY_UPDATE = args.daily
